@@ -1,0 +1,103 @@
+@keyframes animate-slow {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(15px, 0, 0);
+  }
+}
+
+@keyframes animate-slow-rev {
+  from {
+    transform: translate3d(15px, 0, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes animate-in-fast {
+  from {
+    transform: translate3d(0, -200px, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes animate-opacity-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes animate-opacity-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+#gym-title {
+  animation: animate-in-fast 1s ease-out;
+}
+
+#gym-login {
+  animation: 0.3s animate-opacity-in ease-in-out 1s both;
+}
+
+#main-after-login {
+  opacity: 0;
+}
+
+#order-now {
+  transition: all 0.4s ease-in-out;
+}
+
+.order-now-initial {
+  transform: translate3d(0, 0, 0);
+}
+
+.order-now-final {
+  transform: translate3d(15px, 0, 0);
+  opacity: 0.6;
+}
+
+.animate-out {
+  animation: 0.3s animate-opacity-out ease-in-out both !important;
+}
+
+.animate-in {
+  animation: 0.3s animate-opacity-in ease-in-out both !important;
+}
+
+.title-initial {
+  background: linear-gradient(
+      to left,
+      rgba(100, 200, 200, 1),
+      rgba(100, 200, 200, 1)
+    ),
+    linear-gradient(
+      to left,
+      rgba(255, 0, 0, 1),
+      rgba(255, 0, 180, 1),
+      rgba(0, 100, 200, 1)
+    );
+  background-size: 100% 0.1em, 0 0.1em;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
+}
+
+.title-final {
+  background-size: 0 0.1em, 100% 0.1em;
+}

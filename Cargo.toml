@@ -1,0 +1,18 @@
+[package]
+name = "html"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+dioxus = "0.3.2"
+dioxus-helmet = "0.2.4"
+dioxus-router = { version = "0.3.0", features = ["web"] }
+dioxus-web = "0.3.1"
+gloo = "0.8.0"
+gloo-timers = { version = "0.2.6", features = ["futures"] }
+sha256 = "1.1.2"
+wasm-bindgen = "0.2.84"
+wasm-bindgen-futures = "0.4.34"
+web-sys = { version = "0.3.61", features = ["console", "Window", "EventTarget", "Node", "Element", "HtmlElement", "Document", "DomTokenList", "CssStyleDeclaration", "DomRect", "Location"] }
