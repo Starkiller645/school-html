@@ -1,0 +1,15 @@
+name: Dioxus Build
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+      - uses: icepuma/rust-action@master
+        with:
+          args: cd school-html && cargo install dioxus-cli && dioxus build
+      - uses: ludeeus/action-push@0.0.1
+        env: 
+          ACTION_MAIL: "tallie.tye@outlook.com"
+          ACTION_NAME: "octocat"
