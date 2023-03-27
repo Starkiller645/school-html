@@ -8,7 +8,7 @@ jobs:
       - uses: actions/checkout@v1
       - uses: icepuma/rust-action@master
         with:
-          args: cd school-html && cargo install dioxus-cli && dioxus build
+          args: cd /home/runner/work/school-html/school-html && cargo install dioxus-cli && dioxus build
       - uses: ludeeus/action-push@0.0.1
         env: 
           ACTION_MAIL: "tallie.tye@outlook.com"
